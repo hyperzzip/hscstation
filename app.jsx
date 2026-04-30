@@ -5,7 +5,7 @@ const CATEGORIES = window.HSC_CATEGORIES;
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "themeColor": "green",
   "showMascot": true,
-  "defaultLayout": "grid",
+  "defaultLayout": "list",
   "showHeroBanner": true,
   "fontScale": 1
 }/*EDITMODE-END*/;
