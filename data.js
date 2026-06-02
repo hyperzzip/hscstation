@@ -3,21 +3,23 @@
 const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRpwVYEioxBunimO1J0p5Ez1knU6-JxhANC3SkJniQGguCK56gzZpTYhPpzzwkX4zVLTgnDl5HS3BOn/pub?gid=534929420&single=true&output=csv";
 
 window.HSC_CATEGORIES = [
-  { id: "hot",         name: "Hàng hot",                 icon: "🔥" },
-  { id: "khuyenmai",   name: "Khuyến mại",               icon: "🎁" },
-  { id: "moive",       name: "Hàng mới về",              icon: "🆕" },
-  { id: "thitdonglanh",name: "Thịt đông lạnh",           icon: "🥩" },
-  { id: "thuyhaisan",  name: "Thủy hải sản",             icon: "🐟" },
-  { id: "chebien",     name: "Thực phẩm chế biến sẵn",   icon: "🍱" },
-  { id: "nongsandl",   name: "Nông sản đông lạnh",       icon: "🥬" },
-  { id: "nongsantuoi", name: "Nông sản tươi",            icon: "🥕" },
-  { id: "bunmymien",   name: "Bún mỳ miến",              icon: "🍜" },
-  { id: "giavi",       name: "Gia vị",                   icon: "🧂" },
-  { id: "dokho",       name: "Nguyên liệu, đồ khô",      icon: "🌾" },
-  { id: "banhkeo",     name: "Bánh kẹo",                 icon: "🍬" },
-  { id: "douong",      name: "Đồ uống",                  icon: "🥤" },
-  { id: "xachtay",     name: "Hàng xách tay",            icon: "✈️" },
-  { id: "giadung",     name: "Đồ gia dụng",              icon: "🍳" },
+  { id: "hot",         name: "Hàng hot",              icon: "🔥" },
+  { id: "khuyenmai",   name: "Khuyến mại",            icon: "🎁" },
+  { id: "moive",       name: "Hàng mới về",           icon: "🆕" },
+  { id: "nongsantuoi", name: "Nông sản tươi",         icon: "🥕" },
+  { id: "nongsandl",   name: "Nông sản đông lạnh",    icon: "🥬" },
+  { id: "hangdonglanh",name: "Hàng đông lạnh",        icon: "🧊" },
+  { id: "gaobot",      name: "Gạo, bột các loại",     icon: "🌾" },
+  { id: "mibunpho",    name: "Mì, bún, phở",          icon: "🍜" },
+  { id: "dokho",       name: "Nguyên liệu, đồ khô",   icon: "🥜" },
+  { id: "giavi",       name: "Gia vị",                icon: "🧂" },
+  { id: "douong",      name: "Đồ uống",               icon: "🥤" },
+  { id: "banhkeo",     name: "Bánh kẹo",              icon: "🍬" },
+  { id: "tui",         name: "Túi các loại",          icon: "🛍️" },
+  { id: "trungquoc",   name: "Hàng Trung Quốc",       icon: "🇨🇳" },
+  { id: "thailan",     name: "Hàng Thái Lan",         icon: "🇹🇭" },
+  { id: "indonesia",   name: "Hàng Indonesia",        icon: "🇮🇩" },
+  { id: "myanmar",     name: "Hàng Myanmar",          icon: "🇲🇲" },
 ];
 
 function parseCSV(text) {

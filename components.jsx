@@ -70,18 +70,14 @@ function Footer({ theme }) {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>
           <span>Trụ sở: 〒811-0101 福岡県糟屋郡新宮町原上 1720-2</span>
         </div>
-        <div className="hsc-footer-row">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>
-          <span>CN Hakozaki: 〒812-0053 福岡市東区箱崎 2-34-20</span>
-        </div>
-        <div className="hsc-footer-row">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>
-          <span>CN Fukkodai: 〒811-0121 福岡県糟屋郡新宮町美咲 2-7-1</span>
-        </div>
         <div className="hsc-footer-social">
-          <a href="#" aria-label="Facebook">
+          <a href="https://www.facebook.com/Hscstation2017" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-            <span>HSC Station</span>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.tiktok.com/@hscstation" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.69a8.16 8.16 0 0 0 4.77 1.52V6.77a4.85 4.85 0 0 1-1.84-.08z"/></svg>
+            <span>TikTok</span>
           </a>
         </div>
       </div>

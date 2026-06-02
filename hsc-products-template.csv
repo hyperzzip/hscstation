@@ -1,0 +1,27 @@
+id,name,category,priceJPY,priceSale,unit,spec,image,sale,hot,isNew,available,promoNote,description
+p001,Mì tôm Kokomi,"bunmymien,khuyenmai,hot",1700,1700,thùng,"Thùng 30 gói, kiện 10 thùng",,TRUE,TRUE,FALSE,FALSE,HSD mới (7/2026) xuất hàng 10/3. Giá ¥1650/thùng khi lên đơn 30 thùng cùng địa chỉ. Giá ¥1600/thùng từ 50 thùng trở lên!,"Mì tôm Kokomi vị tôm chua cay, dai ngon từng sợi. Khối lượng 65g/gói."
+p002,Tiết vịt chín,"chebien,khuyenmai",150,150,gói,Gói 200g,,TRUE,FALSE,FALSE,TRUE,,"Tiết vịt đã luộc chín, đóng gói hút chân không. Dùng cho bún, cháo, lẩu."
+p003,Bánh đa mè đen nướng sẵn,"dokho,khuyenmai",190,190,gói,Gói 5 chiếc,,TRUE,FALSE,FALSE,TRUE,,"Bánh đa mè đen làng nghề Việt Nam, đã nướng giòn sẵn."
+p004,Sứa ăn liền,"chebien,khuyenmai,hot",285,285,gói,Gói 200g,,TRUE,TRUE,FALSE,TRUE,,"Sứa ăn liền vị chua ngọt, giòn sần sật."
+p005,Sả tươi,"nongsantuoi,khuyenmai",430,430,kg,1 kg,,TRUE,FALSE,FALSE,TRUE,,"Sả tươi nhập từ Việt Nam, thơm đậm."
+p006,Hành tím,"nongsantuoi,khuyenmai",700,700,kg,1 kg,,TRUE,FALSE,FALSE,TRUE,,"Hành tím Lý Sơn, thơm cay đậm đà."
+p007,Phở bò Cung Đình,"bunmymien,khuyenmai",2050,2050,thùng,Thùng 30 gói,,TRUE,FALSE,FALSE,TRUE,,"Phở bò ăn liền Cung Đình, vị truyền thống."
+p008,Phở gà Cung Đình,"bunmymien,khuyenmai",2050,2050,thùng,Thùng 30 gói,,TRUE,FALSE,FALSE,TRUE,,"Phở gà ăn liền Cung Đình, nước dùng đậm đà."
+p009,Nước dừa Coco Xim,"douong,khuyenmai,hot",270,270,lon,330ml,,TRUE,TRUE,FALSE,TRUE,,"Nước dừa nguyên chất Coco Xim, ngọt mát tự nhiên."
+p010,Mì Siukay gà xốt phô mai,"bunmymien,khuyenmai,moive",3000,3000,thùng,Thùng 24 gói,,TRUE,FALSE,TRUE,TRUE,,"Mì Siukay vị gà xốt phô mai, cay nồng đậm đà."
+p011,Phở gà Chinsu,"bunmymien,khuyenmai",2100,2100,thùng,Thùng 30 gói,,TRUE,FALSE,FALSE,TRUE,,"Phở gà Chinsu, hương vị truyền thống."
+p012,Nước mắm Nam Ngư,"giavi,hot",580,,chai,Chai 750ml,,FALSE,TRUE,FALSE,TRUE,,Nước mắm Nam Ngư đậm đà vị truyền thống Việt Nam.
+p013,Tương ớt Chinsu,giavi,320,,chai,Chai 250g,,FALSE,FALSE,FALSE,TRUE,,"Tương ớt Chinsu cay nồng, vị truyền thống."
+p014,Cá basa fillet đông lạnh,"thuyhaisan,moive",1200,,kg,Túi 1kg,,FALSE,FALSE,TRUE,TRUE,,"Cá basa fillet đông lạnh, không xương, cắt sẵn."
+p015,Tôm thẻ đông lạnh,"thuyhaisan,hot",2400,,kg,Túi 500g,,FALSE,TRUE,FALSE,TRUE,,"Tôm thẻ đông lạnh, đã bóc vỏ, kích cỡ đều."
+p016,Thịt ba chỉ heo đông lạnh,thitdonglanh,1850,,kg,Khay 1kg,,FALSE,FALSE,FALSE,TRUE,,"Thịt ba chỉ heo Việt, cắt lát sẵn, đông lạnh."
+p017,Rau muống tươi,"nongsantuoi,moive",380,,bó,Bó 500g,,FALSE,FALSE,TRUE,TRUE,,Rau muống tươi nhập trực tiếp.
+p018,Bánh tráng Tây Ninh,"dokho,hot",450,,gói,Gói 500g,,FALSE,TRUE,FALSE,TRUE,,"Bánh tráng Tây Ninh chính gốc, cuốn dẻo dai."
+p019,Kẹo dừa Bến Tre,banhkeo,520,,gói,Gói 300g,,FALSE,FALSE,FALSE,TRUE,,"Kẹo dừa Bến Tre truyền thống, vị béo ngậy."
+p020,Bánh pía Sóc Trăng,"banhkeo,moive",680,,hộp,Hộp 4 cái,,FALSE,FALSE,TRUE,TRUE,,"Bánh pía Sóc Trăng nhân đậu xanh, sầu riêng."
+p021,Trà Atiso Đà Lạt,douong,890,,hộp,Hộp 25 túi lọc,,FALSE,FALSE,FALSE,TRUE,,"Trà atiso Đà Lạt, thanh nhiệt, mát gan."
+p022,Cà phê G7 hòa tan,"douong,hot",1100,,hộp,Hộp 21 gói,,FALSE,TRUE,FALSE,TRUE,,"Cà phê G7 hòa tan 3in1, đậm đà hương vị."
+p023,Hạt nêm Knorr,giavi,720,,gói,Gói 1.2kg,,FALSE,FALSE,FALSE,TRUE,,Hạt nêm Knorr từ thịt thăn và xương ống.
+p024,Lá lốt tươi,nongsantuoi,350,,bó,Bó 100g,,FALSE,FALSE,FALSE,FALSE,,"Lá lốt tươi, dùng cuốn thịt nướng."
+p025,Mắm tôm Lê Gia,giavi,480,,lọ,Lọ 250g,,FALSE,FALSE,FALSE,TRUE,,"Mắm tôm Lê Gia, chính gốc Thanh Hóa."
+p026,Chả lụa,"chebien,hot",1450,,cây,Cây 500g,,FALSE,TRUE,FALSE,TRUE,,"Chả lụa Việt Nam, mềm dai vừa miệng."
