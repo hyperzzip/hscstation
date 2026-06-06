@@ -158,7 +158,15 @@ function ProductCardRow({ p, onOpen, theme }) {
       <div className="hsc-prod-row-img">
         <img src={p.image} alt={p.name} loading="lazy" />
       </div>
-      <div className="hsc-prod-row-name">{p.name}</div>
+      <div className="hsc-prod-row-body">
+        <div className="hsc-prod-row-name">{p.name}</div>
+        {p.expiryDate && (
+          <div className="hsc-prod-row-hsd">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            HSD: {p.expiryDate}
+          </div>
+        )}
+      </div>
       <div className="hsc-prod-row-price">
         {p.sale && p.priceSale ? (
           <>
@@ -175,6 +183,8 @@ function ProductCardRow({ p, onOpen, theme }) {
     </button>
   );
 }
+
+
 
 function ProductCardGrid({ p, onOpen, theme }) {
   return (

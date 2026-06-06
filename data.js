@@ -64,7 +64,7 @@ function rowToProduct(r) {
     available:   bool(r.available),
     promoNote:   r.promoNote || "",
     description: r.description || "",
-    expiryDate:  r.expiryDate || "",
+    expiryDate:  r.HSD || r.expiryDate || "",
   };
 }
 
