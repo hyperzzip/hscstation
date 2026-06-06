@@ -20,7 +20,7 @@ const THEMES = {
 function LoadingScreen({ theme }) {
   return (
     <div className="hsc-loading">
-      <img src="assets/mascot-cogai.png" alt="" className="hsc-loading-mascot" />
+      <img src="./assets/mascot-cogai.png" alt="" className="hsc-loading-mascot" />
       <div className="hsc-loading-dots">
         <span style={{ background: theme.primary }} />
         <span style={{ background: theme.primary }} />
@@ -50,7 +50,7 @@ function HomeScreen({ products, theme, onSelectCat, onOpenProduct, showHero }) {
             </button>
           </div>
           <div className="hsc-hero-mascot">
-            <img src="assets/mascot-cogai.png" alt="" />
+            <img src="./assets/mascot-cogai.png" alt="" />
           </div>
         </div>
       )}
@@ -142,15 +142,23 @@ function CategoryScreen({ products, catId, search, layout, theme, onOpenProduct,
     let list = products;
     if (catId) list = list.filter(p => p.category.includes(catId));
     if (search.trim()) {
-      const q = search.toLowerCase();
-      list = list.filter(p => p.name.toLowerCase().includes(q));
+      const q = search.trim().toLowerCase();
+      const tokens = q.split(/\s+/).filter(Boolean);
+      list = list.filter(p => {
+        const nameL = p.name.toLowerCase();
+        const barcodeL = (p.barcode || "").toLowerCase();
+        // Check if barcode matches directly
+        if (barcodeL.includes(q)) return true;
+        // Fuzzy name match: ALL tokens must appear in the name (non-contiguous)
+        return tokens.every(t => nameL.includes(t) || barcodeL.includes(t));
+      });
     }
     return list;
   }, [products, catId, search]);
 
   if (filtered.length === 0) return (
     <div className="hsc-empty">
-      <div className="hsc-empty-mascot"><img src="assets/mascot-cogai.png" alt="" /></div>
+      <div className="hsc-empty-mascot"><img src="./assets/mascot-cogai.png" alt="" /></div>
       <h3>Chưa có sản phẩm phù hợp</h3>
       <p>Thử tìm từ khóa khác hoặc xem danh mục khác nha</p>
     </div>
@@ -206,7 +214,8 @@ function App() {
   const cat = CATEGORIES.find(c => c.id === currentCat);
   const headerTitle = currentCat === "__all_cats__" ? "Tất cả danh mục"
                     : cat ? cat.name : "HSC Station";
-  const isHome = currentCat === null;
+  const isHome = currentCat === null && !search.trim();
+  const isSearching = currentCat === null && search.trim().length > 0;
 
   return (
     <div className="hsc-app">
@@ -222,6 +231,8 @@ function App() {
       <main className="hsc-main">
         {loading ? (
           <LoadingScreen theme={theme} />
+        ) : isSearching ? (
+          <CategoryScreen products={products} catId={null} search={search} layout={layout} theme={theme} onOpenProduct={setProductModal} onSelectCat={setCurrentCat} />
         ) : isHome ? (
           <HomeScreen products={products} theme={theme} onSelectCat={setCurrentCat} onOpenProduct={setProductModal} showHero={tweaks.showHeroBanner} />
         ) : (

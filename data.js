@@ -3,23 +3,23 @@
 const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRpwVYEioxBunimO1J0p5Ez1knU6-JxhANC3SkJniQGguCK56gzZpTYhPpzzwkX4zVLTgnDl5HS3BOn/pub?gid=534929420&single=true&output=csv";
 
 window.HSC_CATEGORIES = [
-  { id: "hot",         name: "Hàng hot",              icon: "🔥" },
-  { id: "khuyenmai",   name: "Khuyến mại",            icon: "🎁" },
-  { id: "moive",       name: "Hàng mới về",           icon: "🆕" },
-  { id: "nongsantuoi", name: "Nông sản tươi",         icon: "🥕" },
-  { id: "nongsandl",   name: "Nông sản đông lạnh",    icon: "🥬" },
-  { id: "hangdonglanh",name: "Hàng đông lạnh",        icon: "🧊" },
-  { id: "gaobot",      name: "Gạo, bột các loại",     icon: "🌾" },
-  { id: "mibunpho",    name: "Mì, bún, phở",          icon: "🍜" },
-  { id: "dokho",       name: "Nguyên liệu, đồ khô",   icon: "🥜" },
-  { id: "giavi",       name: "Gia vị",                icon: "🧂" },
-  { id: "douong",      name: "Đồ uống",               icon: "🥤" },
-  { id: "banhkeo",     name: "Bánh kẹo",              icon: "🍬" },
-  { id: "tui",         name: "Túi các loại",          icon: "🛍️" },
-  { id: "trungquoc",   name: "Hàng Trung Quốc",       icon: "🇨🇳" },
-  { id: "thailan",     name: "Hàng Thái Lan",         icon: "🇹🇭" },
-  { id: "indonesia",   name: "Hàng Indonesia",        icon: "🇮🇩" },
-  { id: "myanmar",     name: "Hàng Myanmar",          icon: "🇲🇲" },
+  { id: "hot",          name: "Hàng hot",              icon: "🔥" },
+  { id: "khuyenmai",    name: "Khuyến mại",            icon: "🎁" },
+  { id: "moive",        name: "Hàng mới về",           icon: "🆕" },
+  { id: "nongsantuoi",  name: "Nông sản tươi",         icon: "🥕" },
+  { id: "hangdonglanh", name: "Hàng đông lạnh",        icon: "🧊" },
+  { id: "gaobot",       name: "Gạo, bột các loại",     icon: "🌾" },
+  { id: "mibunpho",     name: "Mì, bún, phở",          icon: "🍜" },
+  { id: "dokho",        name: "Nguyên liệu, đồ khô",   icon: "🥜" },
+  { id: "giavi",        name: "Gia vị",                icon: "🧂" },
+  { id: "douong",       name: "Đồ uống",               icon: "🥤" },
+  { id: "banhkeo",      name: "Bánh kẹo",              icon: "🍬" },
+  { id: "tui",          name: "Túi các loại",          icon: "🛍️" },
+  { id: "hanghoakhac",  name: "Hàng hóa khác",         icon: "📦" },
+  { id: "trungquoc",    name: "Hàng Trung Quốc",       icon: "🇨🇳" },
+  { id: "thailan",      name: "Hàng Thái Lan",         icon: "🇹🇭" },
+  { id: "indonesia",    name: "Hàng Indonesia",        icon: "🇮🇩" },
+  { id: "myanmar",      name: "Hàng Myanmar",          icon: "🇲🇲" },
 ];
 
 function parseCSV(text) {
@@ -50,10 +50,11 @@ function rowToProduct(r) {
   const num  = v => parseFloat(v) || 0;
   return {
     id:          r.id,
+    barcode:     r.barcode || "",
     name:        r.name,
     category:    r.category ? r.category.split(",").map(s => s.trim()) : [],
-    priceJPY:    num(r.priceJPY),
-    priceSale:   r.priceSale ? num(r.priceSale) : null,
+    priceJPY:    Math.round(num(r.priceJPY)),
+    priceSale:   r.priceSale ? Math.round(num(r.priceSale)) : null,
     unit:        r.unit || "cái",
     spec:        r.spec || "",
     image:       r.image || ph(r.name),
@@ -63,6 +64,7 @@ function rowToProduct(r) {
     available:   bool(r.available),
     promoNote:   r.promoNote || "",
     description: r.description || "",
+    expiryDate:  r.expiryDate || "",
   };
 }
 
